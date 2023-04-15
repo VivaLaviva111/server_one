@@ -8,12 +8,16 @@ app.use(bodyParser.json());
 require('dotenv').config()
 const geoRoute = require('./routes/geoRoute')
 const cors = require('cors')
+app.use(cors());
+
 mongoose.set("strictQuery", false);
 mongoose.connect(process.env.DB,{useNewUrlParser:true})
         .then(()=>console.log('Connected to DB'))
         .catch((err)=>console.log(err))
 
-app.use(cors());
+
+
+
 // app.use((req, res, next) => {
 //     res.header('Access-Control-Allow-Methods','*')
 //     res.header('Access-Control-Allow-Origin','*');
