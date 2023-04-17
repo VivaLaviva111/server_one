@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/geo', geoRoute)
 
-
+console.log("yea boy!");
 app.listen(port, () => {
   console.log(`server is runing on port ${port}`);
 });
