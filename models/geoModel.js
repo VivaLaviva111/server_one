@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const geoSchema = mongoose.Schema(
   {
-    geoData: { type: Object, required: true}
+    geoData: { type: Object}
   },
   { timestamps: true }
 );

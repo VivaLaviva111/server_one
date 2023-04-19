@@ -7,6 +7,7 @@ const FormData = require("express-form-data")
 app.use(bodyParser.json());
 require('dotenv').config()
 const geoRoute = require('./routes/geoRoute')
+const contactRoute = require('./routes/contactRoute')
 const cors = require('cors')
 app.use(cors());
 
@@ -30,6 +31,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/geo', geoRoute)
+app.use('/api/contact', contactRoute)
 
 console.log("yea boy!");
 app.listen(port, () => {
