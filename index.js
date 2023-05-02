@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 require('dotenv').config()
 const geoRoute = require('./routes/geoRoute')
 const contactRoute = require('./routes/contactRoute')
+const voucherRoute = require('./routes/voucherRoute')
 const cors = require('cors')
 app.use(cors());
 
@@ -32,6 +33,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/geo', geoRoute)
 app.use('/api/contact', contactRoute)
+app.use('/api/voucher', voucherRoute)
 
 console.log("yea boy!");
 app.listen(port, () => {
